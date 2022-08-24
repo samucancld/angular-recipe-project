@@ -1,8 +1,23 @@
 <div class="row">
     <div class="col-md-5">
-        <app-recipes-list></app-recipes-list>
+        <app-recipes-list
+        (recipeClicked)="onRecipeClicked($event)"></app-recipes-list>
     </div>
     <div class="col-md-7">
-        <app-recipes-detail></app-recipes-detail>
+        <app-recipes-detail
+        *ngIf="recipeOnDetail; else tmpNoSelectedRecipe"
+        [recipe]="recipeOnDetail"></app-recipes-detail>
     </div>
+    <ng-template #tmpNoSelectedRecipe>
+        <h2 class="text-center">Please, select a recipe!</h2>
+        <div class="row">
+            <div class="col-xs-12">
+                <img
+                    src="https://www.cucinare.tv/wp-content/uploads/2020/05/Ratatouille.jpg"
+                    alt=""
+                    style="max-height: 350px"
+                    class="img-fluid rounded d-block">
+            </div>
+        </div>
+    </ng-template>
 </div>

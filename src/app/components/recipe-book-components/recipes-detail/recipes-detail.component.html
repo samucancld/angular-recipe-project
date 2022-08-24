@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-xs-12">
         <img
-            src="https://charlotteslivelykitchen.com/wp-content/uploads/2019/05/lemon-cake-2-500x500.jpg"
+            [src]="recipe.image"
             alt=""
             style="max-height: 350px"
             class="img-fluid rounded d-block">
@@ -9,7 +9,7 @@
 </div>
 <div class="row">
     <div class="col-xs-12">
-        <h1>Recipe Name</h1>
+        <h1>{{recipe.title}}</h1>
     </div>
 </div>
 <div class="row">
@@ -29,12 +29,15 @@
 
 <div class="row">
     <div class="col-xs-12">
-        Description
+        {{recipe.description}}
     </div>
 </div>
 
 <div class="row">
     <div class="col-xs-12">
-        Ingredients
+        Price: ${{recipe.price}}
+    </div>
+    <div class="col-xs-12">
+        Cooking time: {{recipe.time_minutes}} minutes.
     </div>
 </div>
