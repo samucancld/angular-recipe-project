@@ -1,9 +1,13 @@
-<app-header></app-header>
+<app-header
+ (tabClicked)="showComponent($event)"
+ ></app-header>
 <div class="container mx-1">
   <div class="row">
     <div class="col-md-12">
-      <app-recipes></app-recipes>
-      <app-shopping-list></app-shopping-list>
+      <app-recipes
+        *ngIf="component_to_show==='recipe'"></app-recipes>
+      <app-shopping-list
+        *ngIf="component_to_show==='shopping-list'"></app-shopping-list>
     </div>
   </div>
 </div>

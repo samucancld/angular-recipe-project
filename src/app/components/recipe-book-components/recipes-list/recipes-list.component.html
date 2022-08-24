@@ -9,16 +9,16 @@
     <a href="#" class="list-group-item" *ngFor="let recipe of recipes">
       <div class="card w-60 h-65 mt-2 bg-light">
         <div class="row g-0">
-          <div class="col-md-7">
+          <div class="col-md-8">
             <div class="card-body">
               <h4 class="card-title">{{ recipe.title }}</h4>
               <p class="card-text fw-light">{{ recipe.description }}</p>
             </div>
           </div>
-          <div class="col-md-5">
+          <div class="col-md-4">
             <img
-              [src]="recipe.image"
               style="max-height: 120px"
+              [src]="recipe.image"
               class="img-fluid rounded-end float-end img-thumbnail"
               alt="..."
             />

@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-recipe-project';
+ component_to_show: string = 'recipe';
+ showComponent($event: string){
+  this.component_to_show = $event;
+ };
 }
